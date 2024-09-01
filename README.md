@@ -1,1 +1,1 @@
-# sudoku
+# <center>Sudoku</center>

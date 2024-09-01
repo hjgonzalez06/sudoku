@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "next/typescript",
+    "standard-jsx",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    ".storybook",
+    "public",
+    "out",
+    "dist"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "no-console": "error",
+    "import/no-unresolved": "warn"
+  }
+}
