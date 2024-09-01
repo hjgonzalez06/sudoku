@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "clean": "rm -rf .next",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint -d src",
+    "lint:fix": "next lint -d src --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --loglevel warn",
+    "type-check": "tsc --noEmit --declaration false && echo \"✅ No type warnings or errors\""
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",

@@ -1,0 +1,15 @@
+name: Block draft PR merge until ready
+
+on:
+  pull_request:
+    types: [opened, reopened, converted_to_draft, ready_for_review]
+
+jobs:
+  fail_if_pull_request_is_draft:
+    if: github.event.pull_request.draft == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fails in order to indicate that the PR needs to be marked as ready for review and other workflows need to pass.
+      run: |
+        sleep 1
+        exit 1
